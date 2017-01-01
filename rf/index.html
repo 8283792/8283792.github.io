@@ -1,0 +1,1462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>日发</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link type="text/css" rel="stylesheet" href="css/css.css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.jslides.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<script>    
+	$(function(){
+		$(".sub-tab-tit li").click(function(){ 
+			$(this).addClass("selected").siblings().removeClass("selected");
+			var index=$(this).index();
+			$(".sub-tab-cont > div").eq(index).show().siblings().hide();
+			var heit=$(".sub-tab-cont > div").eq(index).height();
+			if(heit>295){
+				$(".sub-tab-cont > div").eq(index).ddClass("scroolY").siblings().removeClass("scroolY");
+			}
+		})
+
+		$(".sub-tab-tit1 li").click(function(){ 
+			$(this).addClass("selected").siblings().removeClass("selected");
+			var index=$(this).index();
+			$(".sub-tab-cont1 > div").eq(index).show().siblings().hide();
+			var heit2=$(".sub-tab-cont1 > div").eq(index).height();
+			if(heit2>295){
+				$(".sub-tab-cont1 > div").eq(index).addClass("scroolY").siblings().removeClass("scroolY");
+			}
+		})
+
+		var heit0=$("#sub-TC1").height();
+		if(heit0>295){
+			$("#sub-TC1").addClass("scroolY");
+		}
+		$(".table-sub tr:even").addClass("bgsub");
+
+		/*4个nav icon图*/
+		$(".titpic01").hover(function(){$(this).addClass("titpic01-on");},function(){$(this).removeClass("titpic01-on");})
+		$(".titpic02").hover(function(){$(this).addClass("titpic02-on");},function(){$(this).removeClass("titpic02-on");})
+		$(".titpic03").hover(function(){$(this).addClass("titpic03-on");},function(){$(this).removeClass("titpic03-on");})
+		$(".titpic04").hover(function(){$(this).addClass("titpic04-on");},function(){$(this).removeClass("titpic04-on");})
+
+		//首页导航nav
+		$("ul.jwsy_navfd").hide();
+		
+		
+		var sub1 = $(".jwsy_navc ul>li");
+		sub1.hover(function(){
+			$(this).find("ul.jwsy_navfd").stop().slideDown();
+		},function(){
+			$(this).find("ul.jwsy_navfd").stop().slideUp();	
+		});
+
+		
+		//底部滑动门第二层
+			var box1 = $(".jwsy_cpnrb1");
+			box1.each(function(){
+				var me = $(this);
+				var _sub1 = me.find(".jwsy_cpsub1 li");
+				var _center1 = me.find(".jwsy_cpnrc .jwsy_cpbg");
+				_sub1.on("click",function(){
+					var _sub2 = $(this);
+					var _inxex3 = _sub2.index();
+					_sub2.addClass("hot").siblings().removeClass("hot");
+					_center1.eq(_inxex3).show().siblings().hide();
+					});
+			});	
+		
+
+		//表格隔行变色
+		/*var td1 = $(".tb1 tr:even");
+		td1.css("background-color","#efefef");
+	
+		var td2 = $(".tb2 tr:even");
+		td2.css("background-color","#efefef");
+	
+		var td3 = $(".tb3 tr:even");
+		td3.css("background-color","#efefef");
+	
+		var td4 = $(".tb4 tr:even");
+		td4.css("background-color","#efefef");
+	
+		var td5 = $(".tb5 tr:even");
+		td5.css("background-color","#efefef");
+	
+		var td6 = $(".tb6 tr:even");
+		td6.css("background-color","#efefef");
+		
+		var td7 = $(".tb7 tr:even");
+		td7.css("background-color","#efefef");
+	
+		var td8 = $(".tb8 tr:even");
+		td8.css("background-color","#efefef");
+	
+		var td9 = $(".tb9 tr:even");
+		td9.css("background-color","#efefef");
+	
+		var td10 = $(".tb10 tr:even");
+		td10.css("background-color","#efefef");*/
+
+	
+	//首页二维码
+	$(".jwsy_gznr").hide();	
+	var sub2 = $(".jwsy_gzbox ul>li");
+	sub2.hover(function(){
+		$(this).find(".jwsy_gznr").show();
+	},function(){
+		$(this).find(".jwsy_gznr").hide();	
+	});
+	});
+</script>
+</head>
+
+<body>
+<div class="jwsy_top">
+  <div class="jwsy_width">
+    <div class="jwsy_kh fl"> <a href="" target="_blank" class="red">快速开户</a>|<a href="" target="_blank">一键登录</a> </div>
+    <div class="jwsy_sj fr">客服时间<span>(周一 至 周五)<span>9:00-18:00</span></span></div>
+    <div class="jwsy_clear"></div>
+  </div>
+</div>
+<div class="jwsy_header">
+  <div class="jwsy_width"> <a href="" target="_blank"><img src="images/jwsy_logo.png" class="fl"></a> <img src="images/jwsy_tel.png" class="fr">
+    <div class="jwsy_clear"></div>
+  </div>
+</div>
+<div class="jwsy_nav">
+  <div class="jwsy_navc">
+    <ul>
+      <li id="li" class="hover"><a href="index.html" class="hot">首页</a>
+        <ul>
+        </ul>
+      </li>
+      <li> <a href="#">日发定制</a>
+        <ul class="jwsy_navfd">
+          <li><a href="#">股票专享</a></li>
+          <li><a href="#">流动性管理专户</a></li>
+        </ul>
+      </li>
+      <li> <a href="#">私募基金</a>
+        <ul class="jwsy_navfd">
+          <li><a href="#">股票投资</a></li>
+          <li><a href="#">量化投资</a></li>
+          <li><a href="#">征信平台</a></li>
+          <li><a href="#">固定收益</a></li>
+        </ul>
+      </li>
+      <li> <a href="#">投资银行</a>
+        <ul class="jwsy_navfd">
+          <li><a href="#">新三板</a></li>
+          <li><a href="#">定向增发</a></li>
+          <li><a href="#">股权投资</a></li>
+          <li><a href="#">并购基金</a></li>
+        </ul>
+      </li>
+      <li> <a href="#">互联网金融</a>
+        <ul class="jwsy_navfd">
+          <li><a href="#">介绍</a></li>
+          <li><a href="#">每期滚动推送</a></li>
+          <li><a href="#">开户及购买流程</a></li>
+        </ul>
+      </li>
+      <li> <a href="#">公募基金</a>
+        <ul class="jwsy_navfd">
+          <li><a href="#">产品介绍</a></li>
+          <li><a href="#">交易</a></li>
+        </ul>
+      </li>
+      <li> <a href="#">关于我们</a>
+        <ul class="jwsy_navfd">
+          <li><a href="#">公司及股东介绍</a></li>
+          <li><a href="#">投资策略</a></li>
+          <li><a href="#">投资团队</a></li>
+          <li><a href="#">公司新闻</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!--banner begin-->
+<div id="banner-screen-slider">
+  <ul id="slides">
+    <li style="background:url('images/jwsy_banner.jpg') no-repeat center top; height:460px;width:100%;">&nbsp;</li>
+    <li style="background:url('images/jwsy_banner.jpg') no-repeat center top; height:460px;width:100%;">&nbsp;</li>
+    <li style="background:url('images/jwsy_banner.jpg') no-repeat center top; height:460px;width:100%;">&nbsp;</li>
+  </ul>
+  <div class="jwsy_lcbox">
+    <div class="jwsy_lc">
+      <h2>理财推荐</h2>
+      <h3>海安开发区2期</h3>
+      <h4>预期收益</h4>
+      <p><span>10.5%</span>起</p>
+      <div class="jwsy_lctj"> <a href="" target="_blank"><img src="images/jwsy_kh.png" ></a><a href="" target="_blank"><img src="images/jwsy_cx.png" ></a> </div>
+    </div>
+  </div>
+</div>
+<!--banner end-->
+<div class="jwsy_fl">
+  <ul>
+    <li><a href="" target="_blank" class="bg1">股票投资</a>
+      <div class="jwsyhot"><a href="" target="_blank"></a></div>
+    </li>
+    <li><a href="" target="_blank" class="bg2">量化投资</a>
+      <div class="jwsyhot"><a href="" target="_blank"></a></div>
+    </li>
+    <li><a href="" target="_blank" class="bg3">新三版</a>
+      <div class="jwsyhot"><a href="" target="_blank"></a></div>
+    </li>
+    <li style="border-right:1px solid #e8e8e8;width:246px;"><a href="" target="_blank" class="bg4">固定收益</a>
+      <div class="jwsyhot4"><a href="" target="_blank"></a></div>
+    </li>
+  </ul>
+  <div class="jwsy_clear"></div>
+</div>
+<div class="jwsy_jiang">
+  <div class="jwsy_jx fl"> <img src="images/jwsy_23.png" class="ja" >
+    <h2>晨星奖项 (<span>3年</span>)</h2>
+    <h3>华泰柏瑞量化增强股票 <span>(000172)</span></h3>
+    <p>单位净值：1.551<span>|</span>累计净值:1.901</p>
+    <div class="jwsy_jxs">
+      <p>最近3月<br />
+        增长率</p>
+      <h2>14.997%</h2>
+    </div>
+    <div class="jwsy_tjly"> <span>推荐理由</span> </div>
+    <div class="jwsy_tjlynr">
+      <p>该基金最近一年表现优异，净值增长持续超越业绩比较基准。</p>
+    </div>
+    <div class="jwsy_tjgm"> <a href="" target="_blank">快速购买</a> </div>
+  </div>
+  <div class="jwsy_jxbr fr"><img src="images/jwsy_banner2.jpg" ></div>
+  <div class="jwsy_clear"></div>
+</div>
+<div class="jwsy_jjbox">
+  <div class="jwsy_jjtit">
+    <h2>产品列表</h2>
+    <div class="jwsy_clear"></div>
+  </div>
+  <div class="jwsy_cp">
+    <div class="jwsy_cpsub">
+      <ul>
+        <li class="hot">日发私募</li>
+        <li> 公募基金
+          <div class="hotli">
+            <p><img src="images/jwsy_ico4.png" ><a href="" target="_blank">开户演示</a></p>
+            <p><img src="images/jwsy_ico5.png" ><a href="" target="_blank">交易演示</a></p>
+            <p><img src="images/jwsy_ico6.png" ><a href="" target="_blank">新增卡演示</a></p>
+            <div class="jwsy_clear"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="jwsy_cpnr">
+      <div class="jwsy_cpnrb1" style="display:block">
+        <div class="jwsy_cpsub1">
+          <ul>
+            <li class="hot">热点基金</li>
+            <li>股票型混</li>
+            <li>保本型</li>
+            <li>债券型</li>
+            <li>货币型</li>
+          </ul>
+        </div>
+        <div class="jwsy_cpnrc">
+          <div class="jwsy_cpbg" style="display:block">
+            <div class="jwsy_cpgd">
+              <table width="940" border="0" cellspacing="0" cellpadding="0" class="tb1">
+                <tr class="bod">
+                  <td width="200" height="36" align="center" bgcolor="#e8e8e8">基金名称</td>
+                  <td align="center" bgcolor="#e8e8e8">基金代码</td>
+                  <td align="center" bgcolor="#e8e8e8">更新日期</td>
+                  <td align="center" bgcolor="#e8e8e8">单位净值</td>
+                  <td align="center" bgcolor="#e8e8e8">累计净值</td>
+                  <td align="center" bgcolor="#e8e8e8">最近一月</td>
+                  <td align="center" bgcolor="#e8e8e8">成立以来</td>
+                  <td align="center" bgcolor="#e8e8e8">增长率</td>
+                  <td align="center" bgcolor="#e8e8e8">状态</td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="ckgd_bt"> <span></span> </div>
+          </div>
+          <div class="jwsy_cpbg">
+            <div class="jwsy_cpgd">
+              <table width="940" border="0" cellspacing="0" cellpadding="0" class="tb1">
+                <tr class="bod">
+                  <td width="200" height="36" align="center" bgcolor="#e8e8e8">基金名称</td>
+                  <td align="center" bgcolor="#e8e8e8">基金代码</td>
+                  <td align="center" bgcolor="#e8e8e8">更新日期</td>
+                  <td align="center" bgcolor="#e8e8e8">单位净值</td>
+                  <td align="center" bgcolor="#e8e8e8">累计净值</td>
+                  <td align="center" bgcolor="#e8e8e8">最近一月</td>
+                  <td align="center" bgcolor="#e8e8e8">成立以来</td>
+                  <td align="center" bgcolor="#e8e8e8">增长率</td>
+                  <td align="center" bgcolor="#e8e8e8">状态</td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="ckgd_bt"> <span></span> </div>
+          </div>
+          <div class="jwsy_cpbg">
+            <div class="jwsy_cpgd">
+              <table width="940" border="0" cellspacing="0" cellpadding="0" class="tb1">
+                <tr class="bod">
+                  <td width="200" height="36" align="center" bgcolor="#e8e8e8">基金名称</td>
+                  <td align="center" bgcolor="#e8e8e8">基金代码</td>
+                  <td align="center" bgcolor="#e8e8e8">更新日期</td>
+                  <td align="center" bgcolor="#e8e8e8">单位净值</td>
+                  <td align="center" bgcolor="#e8e8e8">累计净值</td>
+                  <td align="center" bgcolor="#e8e8e8">最近一月</td>
+                  <td align="center" bgcolor="#e8e8e8">成立以来</td>
+                  <td align="center" bgcolor="#e8e8e8">增长率</td>
+                  <td align="center" bgcolor="#e8e8e8">状态</td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="ckgd_bt"> <span></span> </div>
+          </div>
+          <div class="jwsy_cpbg">
+            <div class="jwsy_cpgd">
+              <table width="940" border="0" cellspacing="0" cellpadding="0" class="tb1">
+                <tr class="bod">
+                  <td width="200" height="36" align="center" bgcolor="#e8e8e8">基金名称</td>
+                  <td align="center" bgcolor="#e8e8e8">基金代码</td>
+                  <td align="center" bgcolor="#e8e8e8">更新日期</td>
+                  <td align="center" bgcolor="#e8e8e8">单位净值</td>
+                  <td align="center" bgcolor="#e8e8e8">累计净值</td>
+                  <td align="center" bgcolor="#e8e8e8">最近一月</td>
+                  <td align="center" bgcolor="#e8e8e8">成立以来</td>
+                  <td align="center" bgcolor="#e8e8e8">增长率</td>
+                  <td align="center" bgcolor="#e8e8e8">状态</td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="ckgd_bt"> <span></span> </div>
+          </div>
+          <div class="jwsy_cpbg">
+            <div class="jwsy_cpgd">
+              <table width="940" border="0" cellspacing="0" cellpadding="0" class="tb1">
+                <tr class="bod">
+                  <td width="200" height="36" align="center" bgcolor="#e8e8e8">基金名称</td>
+                  <td align="center" bgcolor="#e8e8e8">基金代码</td>
+                  <td align="center" bgcolor="#e8e8e8">更新日期</td>
+                  <td align="center" bgcolor="#e8e8e8">单位净值</td>
+                  <td align="center" bgcolor="#e8e8e8">累计净值</td>
+                  <td align="center" bgcolor="#e8e8e8">最近一月</td>
+                  <td align="center" bgcolor="#e8e8e8">成立以来</td>
+                  <td align="center" bgcolor="#e8e8e8">增长率</td>
+                  <td align="center" bgcolor="#e8e8e8">状态</td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="ckgd_bt"> <span></span> </div>
+          </div>
+        </div>
+      </div>
+      <div class="jwsy_cpnrb1">
+        <div class="jwsy_cpsub1">
+          <ul>
+            <li class="hot">热点基金</li>
+            <li>股票型混</li>
+            <li>保本型</li>
+            <li>债券型</li>
+            <li>货币型</li>
+          </ul>
+        </div>
+        
+        <div class="jwsy_cpnrc">
+          <div class="jwsy_cpbg" style="display:block">
+            <div class="jwsy_cpgd">
+              <table width="940" border="0" cellspacing="0" cellpadding="0" class="tb1">
+                <tr class="bod">
+                  <td width="200" height="36" align="center" bgcolor="#e8e8e8">基金名称</td>
+                  <td align="center" bgcolor="#e8e8e8">基金代码</td>
+                  <td align="center" bgcolor="#e8e8e8">更新日期</td>
+                  <td align="center" bgcolor="#e8e8e8">单位净值</td>
+                  <td align="center" bgcolor="#e8e8e8">累计净值</td>
+                  <td align="center" bgcolor="#e8e8e8">最近一月</td>
+                  <td align="center" bgcolor="#e8e8e8">成立以来</td>
+                  <td align="center" bgcolor="#e8e8e8">增长率</td>
+                  <td align="center" bgcolor="#e8e8e8">状态</td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="ckgd_bt"> <span></span> </div>
+          </div>
+          <div class="jwsy_cpbg">
+            <div class="jwsy_cpgd">
+              <table width="940" border="0" cellspacing="0" cellpadding="0" class="tb1">
+                <tr class="bod">
+                  <td width="200" height="36" align="center" bgcolor="#e8e8e8">基金名称</td>
+                  <td align="center" bgcolor="#e8e8e8">基金代码</td>
+                  <td align="center" bgcolor="#e8e8e8">更新日期</td>
+                  <td align="center" bgcolor="#e8e8e8">单位净值</td>
+                  <td align="center" bgcolor="#e8e8e8">累计净值</td>
+                  <td align="center" bgcolor="#e8e8e8">最近一月</td>
+                  <td align="center" bgcolor="#e8e8e8">成立以来</td>
+                  <td align="center" bgcolor="#e8e8e8">增长率</td>
+                  <td align="center" bgcolor="#e8e8e8">状态</td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="ckgd_bt"> <span></span> </div>
+          </div>
+          <div class="jwsy_cpbg">
+            <div class="jwsy_cpgd">
+              <table width="940" border="0" cellspacing="0" cellpadding="0" class="tb1">
+                <tr class="bod">
+                  <td width="200" height="36" align="center" bgcolor="#e8e8e8">基金名称</td>
+                  <td align="center" bgcolor="#e8e8e8">基金代码</td>
+                  <td align="center" bgcolor="#e8e8e8">更新日期</td>
+                  <td align="center" bgcolor="#e8e8e8">单位净值</td>
+                  <td align="center" bgcolor="#e8e8e8">累计净值</td>
+                  <td align="center" bgcolor="#e8e8e8">最近一月</td>
+                  <td align="center" bgcolor="#e8e8e8">成立以来</td>
+                  <td align="center" bgcolor="#e8e8e8">增长率</td>
+                  <td align="center" bgcolor="#e8e8e8">状态</td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="ckgd_bt"> <span></span> </div>
+          </div>
+          <div class="jwsy_cpbg">
+            <div class="jwsy_cpgd">
+              <table width="940" border="0" cellspacing="0" cellpadding="0" class="tb1">
+                <tr class="bod">
+                  <td width="200" height="36" align="center" bgcolor="#e8e8e8">基金名称</td>
+                  <td align="center" bgcolor="#e8e8e8">基金代码</td>
+                  <td align="center" bgcolor="#e8e8e8">更新日期</td>
+                  <td align="center" bgcolor="#e8e8e8">单位净值</td>
+                  <td align="center" bgcolor="#e8e8e8">累计净值</td>
+                  <td align="center" bgcolor="#e8e8e8">最近一月</td>
+                  <td align="center" bgcolor="#e8e8e8">成立以来</td>
+                  <td align="center" bgcolor="#e8e8e8">增长率</td>
+                  <td align="center" bgcolor="#e8e8e8">状态</td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="ckgd_bt"> <span></span> </div>
+          </div>
+          <div class="jwsy_cpbg">
+            <div class="jwsy_cpgd">
+              <table width="940" border="0" cellspacing="0" cellpadding="0" class="tb1">
+                <tr class="bod">
+                  <td width="200" height="36" align="center" bgcolor="#e8e8e8">基金名称</td>
+                  <td align="center" bgcolor="#e8e8e8">基金代码</td>
+                  <td align="center" bgcolor="#e8e8e8">更新日期</td>
+                  <td align="center" bgcolor="#e8e8e8">单位净值</td>
+                  <td align="center" bgcolor="#e8e8e8">累计净值</td>
+                  <td align="center" bgcolor="#e8e8e8">最近一月</td>
+                  <td align="center" bgcolor="#e8e8e8">成立以来</td>
+                  <td align="center" bgcolor="#e8e8e8">增长率</td>
+                  <td align="center" bgcolor="#e8e8e8">状态</td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="ckgd_bt"> <span></span> </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="jwsy_jjbox">
+  <div class="jwsy_jjtit">
+    <h2>日发动态</h2>
+  </div>
+  <div class="jwsy_gxw">
+    <div class="jwsy_gxw1 xwr">
+      <h2>信息披露<span><a href="" target="_blank">更多 ></a></span></h2>
+      <dl>
+        <dt><a href="" target="_blank"><img src="images/xw02.jpg" ></a></dt>
+        <dd>
+          <h3><a href="" target="_blank">日发资产双向收益分级4号基金成立公告</a></h3>
+          <p>尊敬的委托人：根据《中华人民共和国证券投资基</p>
+        </dd>
+      </dl>
+      <ul>
+        <li> <a href="" target="_blank">公募基金：调整不改牛势</a>2015-05-26 </li>
+        <li> <a href="" target="_blank">公募基金：调整不改牛势</a>2015-05-26 </li>
+      </ul>
+    </div>
+    <div class="jwsy_gxw1">
+      <h2>公司新闻<span><a href="" target="_blank">更多 ></a></span></h2>
+      <dl>
+        <dt><a href="" target="_blank"><img src="images/xw01.jpg" ></a></dt>
+        <dd>
+          <h3><a href="" target="_blank">日发资产双向收益分级4号基金成立公告</a></h3>
+          <p>尊敬的委托人：根据《中华人民共和国证券投资基</p>
+        </dd>
+      </dl>
+      <ul>
+        <li> <a href="" target="_blank">公募基金：调整不改牛势</a>2015-05-26 </li>
+        <li> <a href="" target="_blank">公募基金：调整不改牛势</a>2015-05-26 </li>
+      </ul>
+    </div>
+    <div class="jwsy_clear"></div>
+  </div>
+</div>
+<div class="jwsy_jjbox">
+  <div class="jwsy_jjtit">
+    <h2>行业动态</h2>
+  </div>
+  <div class="jwsy_gxw">
+    <div class="jwsy_gxw1 xwr">
+      <h2>时政要闻<span><a href="" target="_blank">更多 ></a></span></h2>
+      <dl>
+        <dt><a href="" target="_blank"><img src="images/xw04.jpg" ></a></dt>
+        <dd>
+          <h3><a href="" target="_blank">日发资产双向收益分级4号基金成立公告</a></h3>
+          <p>尊敬的委托人：根据《中华人民共和国证券投资基</p>
+        </dd>
+      </dl>
+      <ul>
+        <li> <a href="" target="_blank">公募基金：调整不改牛势</a>2015-05-26 </li>
+        <li> <a href="" target="_blank">公募基金：调整不改牛势</a>2015-05-26 </li>
+      </ul>
+    </div>
+    <div class="jwsy_gxw1">
+      <h2>财经新闻<span><a href="" target="_blank">更多 ></a></span></h2>
+      <dl>
+        <dt><a href="" target="_blank"><img src="images/xw03.jpg" ></a></dt>
+        <dd>
+          <h3><a href="" target="_blank">日发资产双向收益分级4号基金成立公告</a></h3>
+          <p>尊敬的委托人：根据《中华人民共和国证券投资基</p>
+        </dd>
+      </dl>
+      <ul>
+        <li> <a href="" target="_blank">公募基金：调整不改牛势</a>2015-05-26 </li>
+        <li> <a href="" target="_blank">公募基金：调整不改牛势</a>2015-05-26 </li>
+      </ul>
+    </div>
+    <div class="jwsy_clear"></div>
+  </div>
+</div>
+
+<!--footer begin-->
+<div class="jwsy_foot">
+  <div class="jwsy_sub"><a href="" target="_blank">网站首页</a>|<a href="" target="_blank">日发定制</a>|<a href="" target="_blank">私募基金</a>|<a href="" target="_blank">公募基金</a>|<a href="" target="_blank">关于我们</a>|<a href="" target="_blank">新手入门</a>|<a href="" target="_blank">投资者须知</a>|<a href="" target="_blank">免责申明</a>|<a href="" target="_blank">网站地图</a>|<a href="" target="_blank">合作机构</a></div>
+  <div class="jwsy_copy">
+    <div class="jwsy_dz fl">
+      <p>版权所有：日发资产管理（上海）有限公司</p>
+      <p>贵宾服务专项：（021）61600500 | 邮箱:rffund@rifa.com.cn </p>
+      <p>公司地址：上海市陆家嘴花园石桥路66号东亚银行大厦1307室 | 邮编：200120 </p>
+    </div>
+    <div class="jwsy_dzc fl">
+      <p>郑重提醒：市场有风险，投资需谨慎</p>
+    </div>
+    <div class="jwsy_ba fr"> <img src="images/jwsy_ba.png">
+      <p>沪ICP备13028722号</p>
+    </div>
+    <div class="jwsy_clear"></div>
+  </div>
+</div>
+
+<!--footer end--> 
+
+<!--右侧漂浮开始-->
+<div class="jwsy_wx">
+  <div class="jwsy_wxnr">
+    <p><img src="images/jwsy_wx01.png"></p>
+    <div class="jwsy_wximg"><img src="images/jwsy_wx02.png"></div>
+  </div>
+</div>
+<!--右侧漂浮结束--> 
+
+<!--中间漂浮开始-->
+<div class="sy_zjpf">
+  <div class="sy_zjpfnr">
+    <div class="sy_zjpfnr1">
+      <div class="sy_zjtctit"> <img src="images/sy_yclogo.png">
+        <h2>合格投资者认定</h2>
+      </div>
+      <div class="sy_zjtcms">
+        <p>根据《私募投资基金监督管理暂行办法》第四章第十四条规定：" 私募基金管理人、私募基金销售机构不得向合格投资者之外的单位和个人募集资金，不得通过报刊、电台、电视、互联网等公众传播媒体或者讲座、报告会、分析会和布告、传单、手机短信、微信、博客和电子邮件等方式，向不特定对象宣传推介。"</p>
+        <p><span>日发资产官网谨遵《私募投资基金监督管理暂行办法》之规定，只向特定的合格投资者宣传推介相关私募投资基金产品。</span></p>
+        <p class="p1">阁下如有意进行私募投资基金投资且满足《私募投资基金监督管理暂行办法》关于"合规投资者"标准之规定，即具备相应风险识别能力和风险承担能力，投资于单只私募基金的金额不低于100 万元，且个人金融类资产不低于300万元或者最近三年个人年均收入不低于50万元人民币。请阁下详细阅读本提示，并注册成为日发资产官网特定的合规投资者，方可获得日发资产网站私募投资基金产品宣传推介服务。</p>
+      </div>
+      <div class="sy_zjtctit2">
+        <p>此产品为私募基金产品，仅可以向合格投资者进行推介，请确认</p>
+      </div>
+      <form id="form1" name="form1" method="post" action="">
+        <div class="sy_zjnrxx">
+          <div class="sy_zjnrxxl fl">
+            <table width="346" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="186" bgcolor="#e7e7e7"><table class="ml20" width="162" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td height="20" colspan="2">确认为合格投资者</td>
+                    </tr>
+                    <tr>
+                      <td width="20" height="20"><input type="checkbox" name="checkbox" id="checkbox" /></td>
+                      <td width="139" height="20"><span>记住我的选择,不再提示</span></td>
+                    </tr>
+                  </table></td>
+                <td><a href="#"><img src="images/jr.png" width="160" height="60" /></a></td>
+              </tr>
+            </table>
+          </div>
+          <div class="sy_zjnrxxr fl">
+            <table width="287" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="126" align="center" bgcolor="#e7e7e7">暂时无法确认</td>
+                <td><strong><img src="images/gb.png" width="160" height="60" /></strong></td>
+              </tr>
+            </table>
+          </div>
+          <div class="jwsy_clear"></div>
+        </div>
+      </form>
+      <div class="sy_zjnrfoot"> <img src="images/sy_ycfoot.png">
+        <p class="p1">以产品创新设计能力卓著为核心竞争力</p>
+        <p>为您提供全能型财富管理服务</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--中间漂浮结束-->
+
+</body>
+</html>

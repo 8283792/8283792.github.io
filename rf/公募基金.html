@@ -1,0 +1,1287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>日发-公募基金</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link type="text/css" rel="stylesheet" href="css/css.css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<script>    
+	$(function(){
+		//首页导航nav
+		$("ul.jwsy_navfd").hide();	
+		var sub1 = $(".jwsy_navc ul>li");
+		sub1.hover(function(){
+			$(this).find("ul.jwsy_navfd").stop().slideDown();
+		},function(){
+			$(this).find("ul.jwsy_navfd").stop().slideUp();	
+		});
+		
+		
+		//底部滑动门
+			var box = $(".jwsy_cp");
+			box.each(function(){
+				var me = $(this);
+				var _sub = me.find(".jwsy_cpsub li");
+				var _center = me.find(".jwsy_cpnr .jwsy_cpnrb1");
+				_sub.on("click",function(){
+					var _sub1 = $(this);
+					var _inxex2 = _sub1.index();
+					_sub1.addClass("hot").siblings().removeClass("hot");
+					_center.eq(_inxex2).show().siblings().hide();
+					});
+			});	
+		//底部滑动门第二层
+			var box1 = $(".jwsy_cpnrb1");
+			box1.each(function(){
+				var me = $(this);
+				var _sub1 = me.find(".jwsy_cpsub1 li");
+				var _center1 = me.find(".jwsy_cpnrc .jwsy_cpbg");
+				_sub1.on("hover",function(){
+					var _sub2 = $(this);
+					var _inxex3 = _sub2.index();
+					_sub2.addClass("hot").siblings().removeClass("hot");
+					_center1.eq(_inxex3).show().siblings().hide();
+					});
+			});	
+		
+		/*2015.05.14添加公募基金js*/
+		/*var hovertd =$(".jwsy_cpbg tr");
+			hovertd.hover(function(){
+				$(this).addClass("hoverStatus");
+			},function(){
+				$(this).removeClass("hoverStatus");
+		});*/
+		//表格隔行变色
+		
+	});
+</script>
+</head>
+
+<body>
+<!--header begin-->
+
+<div class="jwsy_top">
+  <div class="jwsy_width">
+    <div class="jwsy_kh fr"> <a href="" target="_blank" class="red">快速开户</a>|<a href="" target="_blank">一键登录</a> </div>
+    <div class="jwsy_clear"></div>
+  </div>
+</div>
+<div class="jwsy_header">
+  <div class="jwsy_width"> <a href="" target="_blank"><img src="images/jwsy_logo.png" class="fl"></a> <img src="images/jwsy_tel.png" class="fr">
+    <div class="jwsy_clear"></div>
+  </div>
+</div>
+<div class="jwsy_nav">
+  <div class="jwsy_navc">
+    <ul>
+      <li id="li" class="hover"><a href="index.html">首页</a>
+        <ul>
+        </ul>
+      </li>
+      <li> <a href="#">日发定制</a>
+        <ul class="jwsy_navfd">
+          <li><a href="#">股票专享</a></li>
+          <li><a href="#">流动性管理专户</a></li>
+        </ul>
+      </li>
+      <li> <a href="#">私募基金</a>
+        <ul class="jwsy_navfd">
+          <li><a href="#">股票投资</a></li>
+          <li><a href="#">量化投资</a></li>
+          <li><a href="#">征信平台</a></li>
+          <li><a href="#">固定收益</a></li>
+        </ul>
+      </li>
+      <li> <a href="#">投资银行</a>
+        <ul class="jwsy_navfd">
+          <li><a href="#">新三板</a></li>
+          <li><a href="#">定向增发</a></li>
+          <li><a href="#">股权投资</a></li>
+          <li><a href="#">并购基金</a></li>
+        </ul>
+      </li>
+      <li> <a href="#">互联网金融</a>
+        <ul class="jwsy_navfd">
+          <li><a href="#">介绍</a></li>
+          <li><a href="#">每期滚动推送</a></li>
+          <li><a href="#">开户及购买流程</a></li>
+        </ul>
+      </li>
+      <li> <a href="#" class="hot">公募基金</a>
+        <ul class="jwsy_navfd">
+          <li><a href="#">产品介绍</a></li>
+          <li><a href="#">交易</a></li>
+        </ul>
+      </li>
+      <li> <a href="#">关于我们</a>
+        <ul class="jwsy_navfd">
+          <li><a href="#">公司及股东介绍</a></li>
+          <li><a href="#">投资策略</a></li>
+          <li><a href="#">投资团队</a></li>
+          <li><a href="#">公司新闻</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!--header end-->
+
+<div class="publicFund-cont">
+  <div class="fund-left" id="banner">
+    <div class="iconLR"> <img src="images/ad-leftIcon.png" class="iconLeft" onclick="slidePic('prev');" /> <img src="images/ad-rightIcon.png" class="iconRight" onclick="slidePic('next');" /> </div>
+    <ul class="circleDot">
+    </ul>
+    <div class="imgPic" id="banner_list"> <a href="javascript:void(0);"><img src="images/fund-ad.png" /></a> <a href="javascript:void(0);"><img src="images/fund-ad.png" /></a> </div>
+  </div>
+  <div class="fund-right"> <a href="" target="_blank"><img src="images/gmjj_kh.png" ></a>
+    <p><a href="" target="_blank">开户指南</a>|<a href="" target="_blank">绑卡演示</a>|<a href="" target="_blank">交易演示</a></p>
+    <a href="" target="_blank"><img src="images/gmjj_dl.png" ></a> </div>
+</div>
+<div class="publicFund-cont">
+  <div class="publicFund-TPro fl"> <img src="images/jian.png" class="icon">
+    <h2><span class="fl margin-left10">交银治理</span><span class="fl font14x">［600123］</span><span class="fl font14dw">指数型</span></h2>
+    <div class="Tpro-cont" id="Tpro-cont">
+      <div class="padding-top30">
+        <div class="left">
+          <p class="p0">3.45<span class="font18">%</span></p>
+          <p class="p1 heiti">当日净值</p>
+          <p class="p2 heiti">累计净值：<em class="color-red">62.66%</em></p>
+        </div>
+        <div class="right">
+          <p>本基金以目标ETF、标的指数成份股、备选成份股为主要投资对象，把全部或接近全部的基金资产用于跟踪标的指数的表现，正常情况下投资于目标ETF的资产比例不低于基金资产净值的90%...</p>
+          <p class="padding-top10"><a class="abutton w100 fr font16" href="index-PublicFund-baseInfor.html">快速购买</a></p>
+        </div>
+      </div>
+      <div class="publicFund-tuijian none">
+        <div class="netchart margin-top10">
+          <ul class="netchartTit">
+            <li  class="selected"><span>近一周</span></li>
+            <li><span>近一月</span></li>
+            <li><span>近三月</span></li>
+            <li><span>近半年</span></li>
+            <li><span>近一年</span></li>
+          </ul>
+          <div class="netchartCont">
+            <div class="text-c"><img src="images/chartPic2.png" width="100%"></div>
+            <div class="none text-c">1111</div>
+            <div class="none text-c">1111</div>
+            <div class="none text-c">1111</div>
+            <div class="none text-c">1111</div>
+          </div>
+        </div>
+      </div>
+      <div class="none publicFund-zichan">
+        <div class="cakeChart">
+          <div class="divPic"><img src="images/bingPic1.png"></div>
+          <p class="p padding-top15"><span class="span01"></span>股票：34.23%</p>
+          <p class="p"><span class="span02"></span>股票：34.23%</p>
+          <p class="p"><span class="span03"></span>股票：34.23%</p>
+          <p class="p"><span class="span04"></span>股票：34.23%</p>
+          <p class="p"><span class="span05"></span>股票：34.23%</p>
+        </div>
+        <div class="div02">基金总资产：<span class="margin-right28 color-red">12.56亿元</span> 日期：2015-01-01</div>
+      </div>
+      <div class="none publicFund-maneger">
+        <div class="picTit"> 
+          <!--<div class="img"><img src="images/foundDetail-pic.png" width="100%" /></div>-->
+          <p class="heiti font16 font-b">李敏镐</p>
+          <p>职务：基金经理 <em class="margin-left10">任职日期：2013-12-12</em></p>
+          <p>华东师范大学金融学硕士，CPA，14年证券投资从业经历。2000年至2004年任申银万国证券研究所分析师；2004年至2006年任中银国际有限公司分析师；2006年至2007年任香港雷曼兄弟证券公司研究员；2007年至2013年于上投摩根基金管理有限公司任研究部总监、基金经理，其中2011年04月28日至2013年7月8日担任上投摩根成长先锋基金经理。2013年7月加入交银施罗德基金管理有限公……</p>
+        </div>
+      </div>
+      <div class="none publicFund-infor">
+        <dl class="dl">
+          <dt><em class="font16 heiti margin-right28">信息披露</em><a href="#" class="color-red">查看更多</a></dt>
+          <dd><a href="#" class="as">交银稳健第四次分红结果的公告</a> <span class="span">2015-01-01</span></dd>
+          <dd><a href="#" class="as">交银稳健第四次分红结果的公告</a> <span class="span">2015-01-01</span></dd>
+          <dd><a href="#" class="as">交银稳健第四次分红结果的公告</a> <span class="span">2015-01-01</span></dd>
+          <dd><a href="#" class="as">交银稳健第四次分红结果的公告</a> <span class="span">2015-01-01</span></dd>
+          <dd><a href="#" class="as">交银稳健第四次分红结果的公告</a> <span class="span">2015-01-01</span></dd>
+        </dl>
+      </div>
+    </div>
+    <ul class="Tpro-botNav" id="Tpro-botNav">
+      <li class="hover">基本介绍</li>
+      <li>净值回报</li>
+      <li>资产配置</li>
+      <li>基金经理</li>
+      <li>信息批露</li>
+    </ul>
+  </div>
+  <div class="publicFund-TPro fr"> <img src="images/jian.png" class="icon">
+    <h2><span class="fl margin-left10">交银治理</span><span class="fl font14x">［600123］</span><span class="fl font14dw">货币型</span></h2>
+    <div class="Tpro-cont" id="Tpro-cont2">
+      <div class="padding-top30">
+        <div class="left">
+          <p class="p0">3.45<span class="font18">%</span></p>
+          <p class="p1 heiti">当日净值</p>
+          <p class="p2 heiti">累计净值：<em class="color-red">62.66%</em></p>
+        </div>
+        <div class="right">
+          <p>本基金以目标ETF、标的指数成份股、备选成份股为主要投资对象，把全部或接近全部的基金资产用于跟踪标的指数的表现，正常情况下投资于目标ETF的资产比例不低于基金资产净值的90%...</p>
+          <p class="padding-top10"><a class="abutton w100 fr font16" href="#">快速购买</a></p>
+        </div>
+      </div>
+      <div class="publicFund-tuijian none">
+        <div class="netchart margin-top10">
+          <ul class="netchartTit">
+            <li  class="selected"><span>近一周</span></li>
+            <li><span>近一月</span></li>
+            <li><span>近三月</span></li>
+            <li><span>近半年</span></li>
+            <li><span>近一年</span></li>
+          </ul>
+          <div class="netchartCont">
+            <div class="text-c"><img src="images/chartPic2.png" width="100%"></div>
+            <div class="none text-c">1111</div>
+            <div class="none text-c">1111</div>
+            <div class="none text-c">1111</div>
+            <div class="none text-c">1111</div>
+          </div>
+        </div>
+      </div>
+      <div class="none publicFund-zichan">
+        <div class="cakeChart">
+          <div class="divPic"><img src="images/bingPic1.png"></div>
+          <p class="p padding-top15"><span class="span01"></span>股票：34.23%</p>
+          <p class="p"><span class="span02"></span>股票：34.23%</p>
+          <p class="p"><span class="span03"></span>股票：34.23%</p>
+          <p class="p"><span class="span04"></span>股票：34.23%</p>
+          <p class="p"><span class="span05"></span>股票：34.23%</p>
+        </div>
+        <div class="div02">基金总资产：<span class="margin-right28 color-red">12.56亿元</span> 日期：2015-01-01</div>
+      </div>
+      <div class="none publicFund-maneger">
+        <div class="picTit">
+          <p class="heiti font16 font-b">李敏镐</p>
+          <p>职务：基金经理 <em class="margin-left10">任职日期：2013-12-12</em></p>
+          <p>华东师范大学金融学硕士，CPA，14年证券投资从业经历。2000年至2004年任申银万国证券研究所分析师；2004年至2006年任中银国际有限公司分析师；2006年至2007年任香港雷曼兄弟证券公司研究员；2007年至2013年于上投摩根基金管理……</p>
+        </div>
+      </div>
+      <div class="none publicFund-infor">
+        <dl class="dl">
+          <dt><em class="font16 heiti margin-right28">信息披露</em><a href="#" class="color-red">查看更多</a></dt>
+          <dd><a href="#" class="as">交银稳健第四次分红结果的公告</a> <span class="span">2015-01-01</span></dd>
+          <dd><a href="#" class="as">交银稳健第四次分红结果的公告</a> <span class="span">2015-01-01</span></dd>
+          <dd><a href="#" class="as">交银稳健第四次分红结果的公告</a> <span class="span">2015-01-01</span></dd>
+          <dd><a href="#" class="as">交银稳健第四次分红结果的公告</a> <span class="span">2015-01-01</span></dd>
+          <dd><a href="#" class="as">交银稳健第四次分红结果的公告</a> <span class="span">2015-01-01</span></dd>
+        </dl>
+      </div>
+    </div>
+    <ul class="Tpro-botNav" id="Tpro-botNav2">
+      <li class="hover">基本介绍</li>
+      <li>净值回报</li>
+      <li>资产配置</li>
+      <li>基金经理</li>
+      <li>信息批露</li>
+    </ul>
+  </div>
+</div>
+<div class="publicFund-cont"> <a href="#"><img src="images/fund-Mbanner.jpg"></a> </div>
+<div class="jwsy_jjbox">
+  <div class="jwsy_jjtit">
+    <h2>销量排行</h2>
+    <div class="jwsy_clear"></div>
+  </div>
+  <div class="xlph">
+    <div class="publicFund-SalesRank01">
+      <div><img src="images/chartPic.png" /></div>
+      <div class="padding-top10"><img src="images/fund-icon2.png" />交银治理 <img src="images/fund-icon3.png"  class="margin-left10" />交银治理 <img src="images/fund-icon4.png"  class="margin-left10" />交银治理 <img src="images/fund-icon5.png"  class="margin-left10" />交银治理</div>
+    </div>
+    <div class="publicFund-SalesRank02">
+      <dl>
+        <dt class="color-red font-b heiti"><em class="font16">交银治理</em><em class="font12">［600123］</em></dt>
+        <dd class="color-red font16 font-b heiti">总成交量：45632</dd>
+        <dd class="dot">最新净值：1.168</dd>
+        <dd class="dot">单位净值：1.168</dd>
+        <dd class="dot">截止日期：2015-01-15</dd>
+        <dd class="padding-top10"><a href="#" class="abutton font14 w120">立即购买</a></dd>
+      </dl>
+    </div>
+    <div class="publicFund-SalesRank02">
+      <dl>
+        <dt class="color-red font-b heiti"><em class="font16">交银治理</em><em class="font12">［600123］</em></dt>
+        <dd class="color-red font16 font-b heiti">总成交量：45632</dd>
+        <dd class="dot">最新净值：1.168</dd>
+        <dd class="dot">单位净值：1.168</dd>
+        <dd class="dot">截止日期：2015-01-15</dd>
+        <dd class="padding-top10"><a href="#" class="abutton font14 w120">立即购买</a></dd>
+      </dl>
+    </div>
+    <div class="publicFund-SalesRank02">
+      <dl>
+        <dt class="color-red font-b heiti"><em class="font16">交银治理</em><em class="font12">［600123］</em></dt>
+        <dd class="color-red font16 font-b heiti">总成交量：45632</dd>
+        <dd class="dot">最新净值：1.168</dd>
+        <dd class="dot">单位净值：1.168</dd>
+        <dd class="dot">截止日期：2015-01-15</dd>
+        <dd class="padding-top10"><a href="#" class="abutton font14 w120">立即购买</a></dd>
+      </dl>
+    </div>
+    <div class="jwsy_clear"></div>
+  </div>
+</div>
+
+<!--产品列表-->
+<div class="jwsy_jjbox">
+  <div class="jwsy_jjtit">
+    <h2>产品列表</h2>
+    <div class="hotli khdw">
+      <p><img src="images/jwsy_ico4.png" ><a href="" target="_blank">开户演示</a></p>
+      <p><img src="images/jwsy_ico5.png" ><a href="" target="_blank">交易演示</a></p>
+      <p><img src="images/jwsy_ico6.png" ><a href="" target="_blank">新增卡演示</a></p>
+      <div class="jwsy_clear"></div>
+    </div>
+    <div class="jwsy_clear"></div>
+  </div>
+  <div class="jwsy_cp">
+    <div class="jwsy_cpnr">
+      <div class="jwsy_cpnrb1" style="display:block">
+        <div class="jwsy_cpsub1">
+          <ul>
+            <li class="hot">热点基金</li>
+            <li>股票型</li>
+            <li>混合型</li>
+            <li>保本型</li>
+            <li>债券型</li>
+            <li>货币型</li>
+          </ul>
+        </div>
+        <div class="jwsy_cpnrc">
+          <div class="jwsy_cpbg" style="display:block">
+            <div class="jwgm_gd">
+              <table width="940" border="0" cellspacing="0" cellpadding="0" class="tb1">
+                <tr class="bod">
+                  <td width="160" height="36" align="center" bgcolor="#e8e8e8">基金名称</td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">基金代码</td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">更新日期<u><img src="images/index_top.png" ></u></td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">单位净值<u><img src="images/index_top.png" ></u></td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">累计净值<u><img src="images/index_top.png" ></u></td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">最近一月<u><img src="images/index_top.png" ></u></td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">成立以来</td>
+                  <td width="70" align="center" bgcolor="#e8e8e8">增长率</td>
+                  <td align="left" bgcolor="#e8e8e8" class="p20">状态</td>
+                </tr>
+                <tr>
+                  <td width="160" height="36" align="center"><a href="" target="_blank">热点年度货基冠军</a></td>
+                  <td width="100" align="center">0006622</td>
+                  <td width="100" align="center">2015-02-02</td>
+                  <td width="100" align="center">2.263</td>
+                  <td width="100" align="center">2.365</td>
+                  <td width="100" align="center">23.25%</td>
+                  <td width="100" align="center">152.33%</td>
+                  <td width="70" align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="ck"><img src="images/ck.png" ></div>
+          </div>
+          <div class="jwsy_cpbg" >
+            <div class="jwgm_gd">
+              <table width="940" border="0" cellspacing="0" cellpadding="0" class="tb1">
+                <tr class="bod">
+                  <td width="160" height="36" align="center" bgcolor="#e8e8e8">基金名称</td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">基金代码</td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">更新日期</td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">单位净值<u><img src="images/index_top.png" ></u></td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">累计净值<u><img src="images/index_top.png" ></u></td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">最近一月<u><img src="images/index_top.png" ></u></td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">成立以来<u><img src="images/index_top.png" ></u></td>
+                  <td width="70" align="center" bgcolor="#e8e8e8">增长率</td>
+                  <td align="left" bgcolor="#e8e8e8" class="p20">状态</td>
+                </tr>
+                <tr>
+                  <td width="160" height="36" align="center"><a href="" target="_blank">热点年度货基冠军</a></td>
+                  <td width="100" align="center">0006622</td>
+                  <td width="100" align="center">2015-02-02</td>
+                  <td width="100" align="center">2.263</td>
+                  <td width="100" align="center">2.365</td>
+                  <td width="100" align="center">23.25%</td>
+                  <td width="100" align="center">152.33%</td>
+                  <td width="70" align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="jwsy_cpbg" >
+            <div class="jwgm_gd">
+              <table width="940" border="0" cellspacing="0" cellpadding="0" class="tb1">
+                <tr class="bod">
+                  <td width="160" height="36" align="center" bgcolor="#e8e8e8">基金名称</td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">基金代码</td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">更新日期</td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">单位净值<u><img src="images/index_top.png" ></u></td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">累计净值<u><img src="images/index_top.png" ></u></td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">最近一月<u><img src="images/index_top.png" ></u></td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">成立以来</td>
+                  <td width="70" align="center" bgcolor="#e8e8e8">增长率</td>
+                  <td align="left" bgcolor="#e8e8e8" class="p20">状态</td>
+                </tr>
+                <tr>
+                  <td width="160" height="36" align="center"><a href="" target="_blank">热点年度货基冠军</a></td>
+                  <td width="100" align="center">0006622</td>
+                  <td width="100" align="center">2015-02-02</td>
+                  <td width="100" align="center">2.263</td>
+                  <td width="100" align="center">2.365</td>
+                  <td width="100" align="center">23.25%</td>
+                  <td width="100" align="center">152.33%</td>
+                  <td width="70" align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="ck"><img src="images/ck.png" ></div>
+          </div>
+          <div class="jwsy_cpbg" >
+            <div class="jwgm_gd">
+              <table width="940" border="0" cellspacing="0" cellpadding="0" class="tb1">
+                <tr class="bod">
+                  <td width="160" height="36" align="center" bgcolor="#e8e8e8">基金名称</td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">基金代码</td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">更新日期</td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">单位净值<u><img src="images/index_top.png" ></u></td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">累计净值<u><img src="images/index_top.png" ></u></td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">最近一月<u><img src="images/index_top.png" ></u></td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">成立以来</td>
+                  <td width="70" align="center" bgcolor="#e8e8e8">增长率</td>
+                  <td align="left" bgcolor="#e8e8e8" class="p20">状态</td>
+                </tr>
+                <tr>
+                  <td width="160" height="36" align="center"><a href="" target="_blank">热点年度货基冠军</a></td>
+                  <td width="100" align="center">0006622</td>
+                  <td width="100" align="center">2015-02-02</td>
+                  <td width="100" align="center">2.263</td>
+                  <td width="100" align="center">2.365</td>
+                  <td width="100" align="center">23.25%</td>
+                  <td width="100" align="center">152.33%</td>
+                  <td width="70" align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="ck"><img src="images/ck.png" ></div>
+          </div>
+          <div class="jwsy_cpbg" >
+            <div class="jwgm_gd">
+              <table width="940" border="0" cellspacing="0" cellpadding="0" class="tb1">
+                <tr class="bod">
+                  <td width="160" height="36" align="center" bgcolor="#e8e8e8">基金名称</td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">基金代码</td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">更新日期</td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">单位净值<u><img src="images/index_top.png" ></u></td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">累计净值<u><img src="images/index_top.png" ></u></td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">最近一月<u><img src="images/index_top.png" ></u></td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">成立以来</td>
+                  <td width="70" align="center" bgcolor="#e8e8e8">增长率</td>
+                  <td align="left" bgcolor="#e8e8e8" class="p20">状态</td>
+                </tr>
+                <tr>
+                  <td width="160" height="36" align="center"><a href="" target="_blank">热点年度货基冠军</a></td>
+                  <td width="100" align="center">0006622</td>
+                  <td width="100" align="center">2015-02-02</td>
+                  <td width="100" align="center">2.263</td>
+                  <td width="100" align="center">2.365</td>
+                  <td width="100" align="center">23.25%</td>
+                  <td width="100" align="center">152.33%</td>
+                  <td width="70" align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="ck"><img src="images/ck.png" ></div>
+          </div>
+          <div class="jwsy_cpbg">
+            <div class="jwgm_gd">
+              <table width="940" border="0" cellspacing="0" cellpadding="0" class="tb1">
+                <tr class="bod">
+                  <td width="160" height="36" align="center" bgcolor="#e8e8e8">基金名称</td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">基金代码</td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">更新日期</td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">单位净值<u><img src="images/index_top.png" ></u></td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">累计净值<u><img src="images/index_top.png" ></u></td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">最近一月<u><img src="images/index_top.png" ></u></td>
+                  <td width="100" align="center" bgcolor="#e8e8e8">成立以来</td>
+                  <td width="70" align="center" bgcolor="#e8e8e8">增长率</td>
+                  <td align="left" bgcolor="#e8e8e8" class="p20">状态</td>
+                </tr>
+                <tr>
+                  <td width="160" height="36" align="center"><a href="" target="_blank">热点年度货基冠军</a></td>
+                  <td width="100" align="center">0006622</td>
+                  <td width="100" align="center">2015-02-02</td>
+                  <td width="100" align="center">2.263</td>
+                  <td width="100" align="center">2.365</td>
+                  <td width="100" align="center">23.25%</td>
+                  <td width="100" align="center">152.33%</td>
+                  <td width="70" align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">日发进取</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+                <tr>
+                  <td height="36" align="center"><a href="" target="_blank">年度货基冠军</a></td>
+                  <td align="center">0006622</td>
+                  <td align="center">2015-02-02</td>
+                  <td align="center">2.263</td>
+                  <td align="center">2.365</td>
+                  <td align="center">23.25%</td>
+                  <td align="center">152.33%</td>
+                  <td align="center"><span>0.366%</span></td>
+                  <td align="center"><a href="" target="_blank" class="gm">购买</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="ck"><img src="images/ck.png" ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--产品列表end--> 
+
+<!--基金看盘-->
+<div class="jwsy_jjbox">
+  <div class="jwsy_jjtit">
+    <h2>基金看盘</h2>
+    <div class="jwsy_clear"></div>
+  </div>
+  <div class="jjkp">
+    <div class="jjkp_nr1">
+      <dl>
+        <dt><a href="" target="_blank"><img src="images/gmimg.jpg" ></a></dt>
+        <dd>
+          <h2><a href="" target="_blank">A股的进退之机：5000点上的太极推手</a></h2>
+          <p>太极拳法有云：天为阳，地为阴；实为阳，虚为阴；阴阳和合，亦即亦离。股市与经济也是如此。</p>
+        </dd>
+      </dl>
+    </div>
+    <div class="jjkp_nr2">
+      <ul>
+        <li> <a href="" target="_blank">公募基金：调整不改牛势</a>2015-05-26 </li>
+        <li> <a href="" target="_blank">公募基金：调整不改牛势</a>2015-05-26 </li>
+        <li> <a href="" target="_blank">公募基金：调整不改牛势</a>2015-05-26 </li>
+        <li> <a href="" target="_blank">公募基金：调整不改牛势</a>2015-05-26 </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--基金看盘end--> 
+
+<!--footer begin-->
+<div class="jwsy_foot">
+  <div class="jwsy_sub"><a href="" target="_blank">网站首页</a>|<a href="" target="_blank">日发定制</a>|<a href="" target="_blank">私募基金</a>|<a href="" target="_blank">公募基金</a>|<a href="" target="_blank">关于我们</a>|<a href="" target="_blank">新手入门</a>|<a href="" target="_blank">投资者须知</a>|<a href="" target="_blank">免责申明</a>|<a href="" target="_blank">网站地图</a>|<a href="" target="_blank">合作机构</a></div>
+  <div class="jwsy_copy">
+    <div class="jwsy_dz fl">
+      <p>版权所有：日发资产管理（上海）有限公司</p>
+      <p>贵宾服务专项：（021）61600500 | 邮箱:rffund@rifa.com.cn </p>
+      <p>公司地址：上海市陆家嘴花园石桥路66号东亚银行大厦1307室 | 邮编：200120 </p>
+    </div>
+    <div class="jwsy_ba fr"> <img src="images/jwsy_ba.png">
+      <p>沪ICP备13028722号</p>
+    </div>
+    <div class="jwsy_clear"></div>
+  </div>
+</div>
+<!--footer end-->
+
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
