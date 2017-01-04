@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="telephone=no" name="format-detection" />
+<meta name="renderer" content="webkit">
+<base target="_blank"/>
+<title>绑定银行卡列表</title>
+<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<header class="yj_hd">
+	<div class="yj_hd_jz clearfix">
+    	<img class="fl" src="images/dl_fhbt.png">
+        <span>绑定银行卡列表</span>
+        <a href="index.html" target="_parent"><img class="fr" src="images/dl_zy.png"></a>
+    </div>
+</header>
+
+<article class="yhk_ct">
+	<div class="yhk_lb" id="yhk_lb">
+	<ul>
+    	<li>
+            <img class="yhk_ct_img fl" src="images/yhlb_img1.png">
+            <div class="yhk_ct_txt fl">
+                交通银行
+                <p>6225 ****** 0976</p>
+            </div>
+            <img class="fr" src="images/yhlb_jbbt.png">
+            <div class="clearfix"></div>
+        </li>
+        <li>
+        	<img class="yhk_ct_img fl" src="images/yhlb_img2.png">
+            <div class="yhk_ct_txt fl">
+            	工商银行
+            	<p>6225 ****** 0976</p>
+            </div>
+            <img class="fr" src="images/yhlb_jbbt.png">
+            <div class="clearfix"></div>
+        </li>
+        <li>
+        	<img class="yhk_ct_img fl" src="images/yhlb_img3.png">
+            <div class="yhk_ct_txt fl">
+            	建设银行
+            	<p>6225 ****** 0976</p>
+            </div>
+            <img class="fr" src="images/yhlb_jbbt.png">
+            <div class="clearfix"></div>
+        </li>
+        <li>
+        	<img class="yhk_ct_img fl" src="images/yhlb_img4.png">
+            <div class="yhk_ct_txt fl">
+            	招商银行
+            	<p>6225 ****** 0976</p>
+            </div>
+            <img class="fr" src="images/yhlb_jbbt.png">
+            <div class="clearfix"></div>
+        </li>
+    </ul>
+    </div>
+    <div class="yhk_ct_bt">
+    <input type="button" value="添加银行卡" class="yhk_ct_bt1">
+    <img class="yhk_ct_tj" src="images/yhlb_tjyhk.png">
+    </div>
+</article>
+
+<div class="fbg_tck1" id="fbg_tck1">
+	<div class="fbg_tck_jz">
+        <img src="images/dl_yqtx.png">
+        <h3>交通银行 0976</h3>
+        <p>确认解除绑定？</p>
+        <div class="fbg_tck1_bt clearfix" id="fbg_tck1_bt">
+            <input class="fbg_tck1_qx fl" type="button" value="取消">
+            <input type="button" value="确认" class="fbg_tck1_qx fbg_tck1_qr fr">
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+	(function (doc, win) {
+	var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	var clientWidth = docEl.clientWidth;
+	if (!clientWidth) return;
+	if(clientWidth>=640){
+	docEl.style.fontSize = '100px';
+	}else{
+	docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+	}
+	};
+	
+	if (!doc.addEventListener) return;
+	win.addEventListener(resizeEvt, recalc, false);
+	doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>
+<script>
+    var oDiv = document.getElementById('yhk_lb');
+    var aLi = oDiv.getElementsByTagName('li');
+    var oTab = document.getElementById('fbg_tck1');
+    var oArticle = document.getElementsByTagName('article')[0];
+    var oBtn = document.getElementById('fbg_tck1_bt');
+    var oBtnCancel = oBtn.getElementsByTagName('input')[0];
+    var oBtnConfirm = oBtn.getElementsByTagName('input')[1];
+    for(var i=0;i<aLi.length;i++){
+        aLi[i].addEventListener('touchstart',start1);
+        function start1(){
+            for(var k=0;k<aLi.length;k++){
+                aLi[k].className = '';
+            }
+            this.className = 'hot';
+            this.style.zIndex = 99;
+        };
+        aLi[i].addEventListener('touchend',end1);
+       function end1(){
+            for(var j=0;j<aLi.length;j++){
+                aLi[j].style.zIndex = 1;
+                aLi[j].className = '';
+            }
+        }
+
+
+        var aImg = aLi[i].getElementsByTagName('img')[1];
+        aImg.index = i;
+        aImg.addEventListener('touchend',end2);
+        function end2(){
+            _index = this.index;
+            oTab.style.display = 'block';
+            oArticle.className = 'yhk_ct row';
+            oBtnCancel.addEventListener('touchend',end3);
+            function end3(){
+                oArticle.className = 'yhk_ct';
+                oTab.style.display = 'none';
+            }
+            //使用addEventListener绑定touch出问题
+            oBtnConfirm.addEventListener('touchend',end4);
+            //oBtnConfirm.onclick = function(){
+            function end4(){
+                aLi[_index].parentNode.removeChild(aLi[_index]);
+                oArticle.className = 'yhk_ct';
+                oTab.style.display = 'none';
+                aImg.index--;
+                alert(_index);
+            }
+        }
+    }
+</script>
+</body>
+</html>

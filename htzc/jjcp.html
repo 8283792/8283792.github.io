@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="telephone=no" name="format-detection" />
+<meta name="renderer" content="webkit">
+<base target="_blank"/>
+<title>用户登录</title>
+<link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+<header class="dl_hd">
+	<div class="dl_hd_jz clearfix">
+        <a class="fl" href=""><img src="images/dl_fhbt.png"></a>
+        <span class="wxbd sfyz fl">身份验证</span>
+        <span class="wxbd ktwsjy fl">开通网上交易</span>
+        <span class="wxbd bdyhklb fl">绑定银行卡列表</span>
+        <a href="index.html" target="_parent" class="fr"><img src="images/dl_zy.png"></a>
+    </div>
+</header>
+
+<article class="jjcp_ct">
+	<div class="sfyz_ct">
+    	<div class="sfyz_ct_hd">
+        	<span>身份校验</span><span>开户成功</span>
+        </div>
+        
+        <div class="sfyz_ct_ct">
+        	<form>
+            	<input type="text" class="sfyz_xm"><span class="sfyz_xm_dw">真实姓名：</span>
+                <select class="sfyz_xm sfyz_zjlx"><option></option></select><span class="sfyz_xm_dw sfyz_zjlx_dw">证件类型：</span>
+                <input type="text" class="sfyz_xm sfyz_zjhm"><span class="sfyz_xm_dw sfyz_zjhm_dw">证件号码：</span>
+                <input type="text" class="sfyz_xm sfyz_tel"><span class="sfyz_xm_dw sfyz_tel_dw">手机号码：</span>
+                <input type="text" class="sfyz_xm sfyz_pswd"><span class="sfyz_xm_dw sfyz_pswd_dw">密码：</span>
+                <input type="text" class="sfyz_xm sfyz_qpswd"><span class="sfyz_xm_dw sfyz_qpswd_dw">确认密码：</span>
+                <div class="sfyz_yzm1 clearfix"><input class="sfyz_xm sfyz_yzm fl" type="text"><span class="sfyz_xm_dw sfyz_yzm_dw">证件类型：</span><img class="fl" src="images/zh_yzm2_03.png"></div>
+                <div class="sfyz_tyxz"><input id="c2" class="chk_1" type="checkbox" /><label for="c2">同意并已阅读<a href="">《电子签名约定书》</a>
+和<a href="">《风险问卷》</a></label></div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="ktwsjy_ct">
+    	<div class="ktwsjy_ct_hd">
+        	    为更好的满足亲能够
+<p>购买我司理财产品，请开通网上交易</p>
+        </div>
+        
+        <div class="ktwsjy_ct_ct">
+        	<form>
+            	<input type="text" class="ktwsjy_id" placeholder="310000000333789456"><span class="ktwsjy_id_dw">身份证号：</span>
+                <input type="text" class="ktwsjy_id ktwsjy_name"><span class="ktwsjy_id_dw ktwsjy_name_dw">真实姓名：</span>
+                <input type="text" class="ktwsjy_id ktwsjy_tel"><span class="ktwsjy_id_dw ktwsjy_tel_dw">手机号码：</span>
+                <input type="text" class="ktwsjy_id ktwsjy_pswd"><span class="ktwsjy_id_dw ktwsjy_pswd_dw">密码：</span>
+                <input type="text" class="ktwsjy_id ktwsjy_qpswd"><span class="ktwsjy_id_dw ktwsjy_qpswd_dw">确认密码：</span>
+                <div class="ktwsjy_yzm clearfix">
+                	<input type="text" class="ktwsjy_id ktwsjy_yzm_txt fl"><span class="ktwsjy_id_dw ktwsjy_yzm_txt_dw">验证码：</span><img class="fr" src="images/zh_yzm2_03.png">
+                </div>
+                <div class="ktwsjy_tyxz">
+                	<input type="checkbox" id="c3" checked><label for="c3">同意并已阅读<a href="">《电子签名约定书》</a>和<a href="">《风险问卷》</a></label>
+                </div>
+                <input type="button" value="下一步" class="ktwsjy_xybbt"><!--按钮阴影出格-->
+            </form>
+        </div>
+    </div>
+</article>
+
+<script type="text/javascript">
+	(function (doc, win) {
+	var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	var clientWidth = docEl.clientWidth;
+	if (!clientWidth) return;
+	if(clientWidth>=640){
+	docEl.style.fontSize = '100px';
+	}else{
+	docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+	}
+	};
+	
+	if (!doc.addEventListener) return;
+	win.addEventListener(resizeEvt, recalc, false);
+	doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>
+
+
+
+</body>
+</html>

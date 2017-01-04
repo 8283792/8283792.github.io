@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="telephone=no" name="format-detection" />
+<meta name="renderer" content="webkit">
+<base target="_blank"/>
+<title>首頁</title>
+<link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+<header class="sy_head">
+	<div class="sy_head_bt">
+    	<a id="sy_wdl" href=""><img src="images/sy_headbt02.png"></a>
+        	<a href=""><img src="images/sy_headbt01.png"></a>
+    </div>
+</header>
+
+<article class="sy_ct">
+	<div class="sy_ct_jz">
+    	<div class="sy_ct_jz_txt">
+        	<div class="sy_sws">
+            	<div class="sy_wdl">
+                	<a href=""><img src="images/sy_banner.jpg"></a>
+                </div>
+            	<div class="sy_ydl">
+                	<div class="sy_ct_jz_txt_dw"><!--银行卡字体无法设置过小-->
+                        <a href="bdyhklb.html" target="_parent">银行卡</a>
+                    </div>
+                    <h2><span class=" fl">沈万三</span>130****1245<div class="clearfix"></div></h2>
+                    <p>上次登录时间：2014-02-26 22:27:37</p><!--在640分辨率下无法设置一行显示-->
+                    <h3><span class="fl">总资产：</span>6845200（元）<div class="clearfix"></div></h3>
+                    <h4 class="sy_sws_ts"><span class="fl">现金赢家：</span>845200（元）<a href="" class="fr">查看我的账簿</a><div class="clearfix"></div></h4>
+                    <h4><span class="fl">高端理财：</span>845200（元）<div class="clearfix"></div></h4>
+                </div>
+            </div>
+            <div class="sy_htyyc">
+            	<div class="sy_htyyc_hd">
+                	<div class="sy_htyyc_hd_l fl">海通月月财</div>
+                    <div class="sy_htyyc_hd_c fl">最新七日年化收益</div>
+                    <div class="sy_htyyc_hd_r fr"><span>5.086%</span></div>
+                    <div class="clearfix"></div>
+                </div>
+                
+                <p>是银行活期利率的</p>
+                <p><b>16.8</b>倍</p>
+                <div class="sy_ys">免手续费 / 随存随取 / 实时到帐 / 百元起购</div>
+                <a class="sy_ljgmbt" href="">立即购买</a>
+            </div>
+        </div>
+        <div class="sy_ct_jz_bt">
+        	<ul>
+            	<li>
+                	<a href=""><img src="images/sy_fbdlt.png"></a>
+                </li>
+                <li>
+                	<a href=""><img src="images/sy_rxcp.png"></a>
+                </li>
+                <li>
+                	<a href="wdzc2.html" target="_parent"><img src="images/sy_wdzc.png"></a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</article>
+
+<footer class="sy_footer clearfix">
+	<a href=""><img src="images/sy_ftbt01.png"></a>
+    <a href=""><img src="images/sy_ftbt02.png"></a>
+     <a class="sy_midimg" href=""><img src="images/sy_midbt.png"></a>
+    <a href="xjyj.html" target="_parent" class="sy_ftbt03"><img src="images/sy_ftbt03.png"></a>
+    <a href="" class="sy_ftbt04"><img src="images/sy_ftbt04.png"></a>
+</footer>
+
+<script type="text/javascript">
+	(function (doc, win) {
+	var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	var clientWidth = docEl.clientWidth;
+	if (!clientWidth) return;
+	if(clientWidth>=640){
+	docEl.style.fontSize = '100px';
+	}else{
+	docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+	}
+	};
+	
+	if (!doc.addEventListener) return;
+	win.addEventListener(resizeEvt, recalc, false);
+	doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="telephone=no" name="format-detection" />
+<meta name="renderer" content="webkit">
+<base target="_blank"/>
+<title>用户登录</title>
+<link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+<header class="dl_hd">
+	<div class="dl_hd_jz clearfix">
+        <a class="fl" href=""><img src="images/dl_fhbt.png"></a>
+        <span class="wxbd fl">微信绑定</span>
+        <span class="zhma fl">找回密码</span>
+        <span class="yhdl fl">用户登录</span>
+        <a href="index.html" target="_parent" class="fr"><img src="images/dl_zy.png"></a>
+    </div>
+</header>
+
+<article class="dl_ct">
+	<div class="dl_bd">
+    	<div class="dl_bd01">
+            <h2>绑定成功</h2>
+            <p>微信账号：86378285@qq.com</p>
+            <a href="">确认</a>
+        </div>
+        
+        <div class="dl_bd02">
+        	<form>
+            	<input type="text" class="dl_sfz"><span class="dl_sfz_dw">身份证号：</span>
+               <input type="text" class="dl_mm"><span class="dl_mm_dw">密码：</span>
+               	<a class="dl_wjmm" href="">忘记密码？</a>
+                <input type="button" class="dl_bdbt" value="绑定">
+            </form>
+        </div>
+    </div>
+    
+    <div class="dl_zhmm">
+    	<div class="dl_step1">
+        	<form>
+            	<input type="text" placeholder="3426231987123156" class="zh_sfz"><span class="zh_sfz_dw">身份证号：</span>
+                <div class="dl_sjyzm"><input type="text" class="zh_tel"><span class="zh_tel_dw">手机：</span>
+                <input type="button" value="发送校检码" class="zh_fsyzm fl"><div class="clearfix"></div></div>
+                <input type="text" class="zh_xym"><span class="zh_xym_dw">校验码：</span>
+                <div class="dl_yzm clearfix"><input type="text" class="zh_yzm fl"><span class="zh_yzm_dw fl">验证码：</span>
+                <a class="zh_yzm2 fl" href=""><img src="images/zh_yzm2_03.png"></a></div>
+                <input type="button" class="zh_xyb" value="下一步">
+            </form>
+        </div>
+        
+        <div class="dl_step2">
+        	<form>
+            	<input type="text" class="zh_xmm"><span class="zh_xmm_dw">新密码：</span>
+                <input type="text" class="zh_xmm zh_qrmm"><span class="zh_xmm_dw zh_qrmm_dw">确认密码：</span>
+                <div class="zh_yqtx">下次登录请使用新密码</div>
+                <a href="" class="zh_xyb">确认</a>
+            </form>
+        </div>
+        
+        <div class="dl_step3">
+        	<div class="zh_xgcg">
+            修改成功
+            </div>
+            <p>请使用新密码重新登陆！</p>
+             <a href="" class="zh_xyb">确认</a>
+        </div>
+    </div>
+    
+    <div class="dl_yhdl">
+    	<img src="images/dl_logo.jpg">
+        <form>
+        	<input type="text" class="dl_inptid" placeholder="请输入身份证号码">
+            <input type="button" name="开户" class="dl_kh fl" value="开户">
+            <input type="button" name="登录" class="dl_dl fr" value="登录">
+            <div class="clearfix"></div>
+        </form>
+    </div>
+</article>
+
+<script type="text/javascript">
+	(function (doc, win) {
+	var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	var clientWidth = docEl.clientWidth;
+	if (!clientWidth) return;
+	if(clientWidth>=640){
+	docEl.style.fontSize = '100px';
+	}else{
+	docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+	}
+	};
+	
+	if (!doc.addEventListener) return;
+	win.addEventListener(resizeEvt, recalc, false);
+	doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>
+
+
+
+</body>
+</html>
