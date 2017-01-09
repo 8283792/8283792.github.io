@@ -5,6 +5,7 @@
 	<title>About Me</title>
 </head>
 <style type="text/css">
+body{background: #eee;}
 *{margin:0;padding:0;font-size: 12px;}
 h1{text-align: center;margin: 10px 0;font-size: 30px}
 h2{font-size: 20px;height: 40px;line-height: 40px;}
@@ -29,8 +30,37 @@ ul,li{list-style: none;}
 .btn{margin-top: 10px;}
 .btn a{display: block;width: 100px;height: 40px;line-height: 40px;text-align: center;color: #fff;text-decoration: none;border-radius: 10px; background: red;}
 p{padding:0 20px;}
+.cb_btn{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+    display: block;
+    width: 120px;
+    height: 50px;
+    background: rgba(100,100,100,1);
+    text-decoration:none;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    color: #000;
+    font-weight: bold;
+    position: fixed;
+    right: 20px;
+    top: 40px;
+    z-index: 99;
+}
+.cb_btn:hover {
+	color:#23527c;
+    text-decoration: none;
+    animation:an 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes an{
+    0% {transform: rotateY(0deg);}
+    100% {transform: rotateY(360deg);}
+}
 </style>
 <body>
+<a href="https://8283792.github.io" class="cb_btn">BACK</a>
 <h1>About Me</h1>
 <div class="container">
 	<h2 style="border-bottom: none;" class="bor">【基本信息】</h2>
