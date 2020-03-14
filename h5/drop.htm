@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>2019断舍离_腾讯新闻</title>
+<link rel="stylesheet"href="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/css/VogsoStyle-1.0.0.css">
+<link rel="stylesheet" href="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/css/style.css">
+<script src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/js/libs/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/js/libs/easeljs.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/js/libs/preloadjs.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/js/libs/tweenjs.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/js/libs/soundjs.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/js/libs/Text.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/js/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/js/Game.class.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/js/libs/Vogsojs-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+<script src=./js/ppo.1.3.19.min.js ></script>
+<script src=https://pingjs.qq.com/ping.js></script>
+<script src="./js/share_data.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="box">
+	<!-- 音频开关 -->
+	<div class="audio">
+		<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/audio_no.png" alt="" class="no">
+		<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/audio_yes.png" alt="" class="yes">
+		<audio src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/sounds/bgm.mp3" id="bgm" loop preload></audio>
+	</div>
+	<!-- 弹窗 -->
+	<div class="popup">
+		<!-- 提示 -->
+		<div class="popup_hint pop">
+			<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/popup_hint.png" alt="">
+		</div>
+		<!-- 提示数量 -->
+		<div class="popup_hintNum pop">
+			<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/popup_hint_number.png"
+				alt="">
+		</div>
+		<!-- 物品信息 -->
+		<div class="popup_info pop">
+			<img src="./img/popup_info.png" alt="">
+			<div class="ioc">
+				<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/res/ioc_14.png" alt="">
+			</div>
+			<div class="ioc_s"></div>
+			<div class="tit">大盆绿植</div>
+			<div class="text">半死不活的绿植，有点像你加班时的精神状态</div>
+			<div class="btn_lose">
+				<img src="./img/popup_info_lose.png"
+					alt="">
+			</div>
+			<div class="btn_stay">
+				<img src="./img/popup_info_stay.png"
+					alt="">
+			</div>
+		</div>
+		<div class="popup_about pop">
+			<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/popup_about.png" alt="">
+		</div>
+	</div>
+	<div class="loading">
+		<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/loading_bg.jpg" alt="">
+		<div class="ioc"></div>
+		<!-- <div class="logo">
+			<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/logo.png" alt="">
+		</div> -->
+		<div class="perBoxes">
+			<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/loading_per_bg.png"
+				alt="">
+			<div class="per">
+				<div class="overflow">
+					<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/loading_per.jpg"
+						alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="index">
+		<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/index_bg.jpg" alt="">
+		<div class="btn">
+			<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/index_btn.png" alt="">
+		</div>
+		<!-- <div class="logo">
+			<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/logo.png" alt="">
+		</div> -->
+	</div>
+	<!-- 进入页 -->
+	<div class="door">
+		<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/door_bg.jpg" alt="">
+		<div class="btn">
+			<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/door_btn_no.png" alt="" class="no">
+			<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/door_btn_yes.png" alt="" class="yes">
+		</div>
+		<div class="sex">
+			<div class="man choice" data-val='男'>
+				<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/door_sex_bg_no.png" alt="">
+				<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/door_sex_bg_yes.png" alt="" class="yes">
+				<div class="text">
+					<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/door_sex_man.png" alt="">
+				</div>
+			</div>
+			<div class="girl choice" data-val='女'>
+				<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/door_sex_bg_no.png" alt="">
+				<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/door_sex_bg_yes.png" alt="" class="yes">
+				<div class="text">
+					<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/door_sex_girl.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="gate">
+			<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/door_door_off.png" alt="" class="no">
+			<div class="yes">
+				<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/door_door_on.png" alt="">
+				<div class="ioc man">
+					<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/door_man.png" alt="">
+				</div>
+				<div class="ioc girl">
+					<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/door_girl.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="room">
+		<canvas id='game' width="750" height="1500"></canvas>
+	</div>
+	<div class="result">
+		<img src="" alt="" class="poster poster_2">
+		<img src="" alt="" class="poster poster_1">
+		<div class="mask"></div>
+		<div class="btn_back">
+			<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/result_btn.png" alt="">
+		</div>
+		<div class="hint">
+			<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/result_hint.png" alt="">
+		</div>
+		<div class="hint_1">
+			<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/result_hint_1.png" alt="">
+		</div>
+		<div class="btn_about">
+			<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/result_about.png" alt="">
+		</div>
+		<div class="btn_about">
+			<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/result_about.png" alt="">
+		</div>
+		<div class="btn_topic">
+			<a href="https://view.inews.qq.com/topic/359165" target="_blank"><img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/result_topic.png" alt=""></a>
+		</div>
+		<div class="btn_state">
+			<img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/result_throw.png" alt="" class="yes"><img src="https://mat1.gtimg.com/news/images/static/2019/chenqiwang/drop/images/result_retain.png" alt="" class="no"></div></div></div></body></html><!--[if !IE]>|xGv00|6d3517541cf7cf08f2ad7a71b8003a13<![endif]-->
